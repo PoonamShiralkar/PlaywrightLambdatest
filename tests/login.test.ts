@@ -21,5 +21,5 @@ test("login demo", async()=>{
     const page1 = await context2.newPage();
     await page1.goto("https://ecommerce-playground.lambdatest.io/index.php?route=account/account");
    
-    await page1.waitForTimeout(3000);
+    //await page1.waitForTimeout(3000);
 })
