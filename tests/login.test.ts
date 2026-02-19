@@ -12,7 +12,7 @@ test("login demo", async()=>{
     await page.hover("//*[@id='widget-navbar-217834']/ul/li[6]/a/div/span");
     await page.click("text=Login");
     await page.fill("input[name='email']","shiralkar.poonam@gmail.com");
-    await page.fill("input[type='password']","pass123")
+    await page.fill("input[type='password']","")
     await page.click("input[value='Login']");
 
     await page.waitForTimeout(3000);
