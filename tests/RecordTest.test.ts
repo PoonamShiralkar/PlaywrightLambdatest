@@ -20,7 +20,7 @@ test('test', async ({ page }) => {
   await page.getByRole('textbox', { name: 'E-Mail Address' }).fill('shiralkar.poonam@gmail.com');
   await page.getByRole('textbox', { name: 'E-Mail Address' }).press('Tab');
   await page.getByRole('textbox', { name: 'Password' }).click();
-  await page.getByRole('textbox', { name: 'Password' }).fill('pass123');
+  await page.getByRole('textbox', { name: 'Password' }).fill('');
   await page.getByRole('button', { name: 'Login' }).click();
   await page.getByRole('link', { name: ' Edit your account' }).click();
   await page.getByRole('textbox', { name: 'First Name *' }).click();
