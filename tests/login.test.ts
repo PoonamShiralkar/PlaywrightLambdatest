@@ -2,9 +2,9 @@ import{chromium, test} from "@playwright/test";
 
 test("login demo", async()=>{
 
-    const browser = await chromium.launch({
-        headless : false }
-    );
+     const browser = await chromium.launch({
+         headless : false // to see the browser action
+        });
     const context = await browser.newContext();
     const page = await context.newPage();
 
@@ -15,11 +15,13 @@ test("login demo", async()=>{
     await page.fill("input[type='password']","")
     await page.click("input[value='Login']");
 
+    // to verify that user is logged in successfully
     await page.waitForTimeout(3000);
    
     const context2 = await browser.newContext();
     const page1 = await context2.newPage();
     await page1.goto("https://ecommerce-playground.lambdatest.io/index.php?route=account/account");
    
-    //await page1.waitForTimeout(3000);
+    // to verify that user is logged in successfully
+    await page1.waitForTimeout(3000);
 })
