@@ -8,8 +8,10 @@ test("login demo", async()=>{
     const context = await browser.newContext();
     const page = await context.newPage();
 
+    // to perform login action 
     await page.goto("https://ecommerce-playground.lambdatest.io/");
     await page.hover("//*[@id='widget-navbar-217834']/ul/li[6]/a/div/span");
+
     await page.click("text=Login");
     await page.fill("input[name='email']","shiralkar.poonam@gmail.com");
     await page.fill("input[type='password']","")
