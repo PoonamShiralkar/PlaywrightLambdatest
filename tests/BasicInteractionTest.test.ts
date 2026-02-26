@@ -1,6 +1,6 @@
 import {expect, test} from "@playwright/test";
 
-test("Basic Interaction Test", async({page})=>{
+test("Login Test", async({page})=>{
     await page.goto("https://www.lambdatest.com/selenium-playground/simple-form-demo");
 
     const message = page.locator("input#user-message");
@@ -19,7 +19,7 @@ test("Basic Interaction Test", async({page})=>{
 })
 
 
-test("Basic Interaction Test", async({page})=>{
+test("Addition Test", async({page})=>{
     await page.goto("https://www.lambdatest.com/selenium-playground/simple-form-demo");
 
     const sum1 = page.locator("#sum1");
@@ -48,7 +48,7 @@ test("Basic Interaction Test", async({page})=>{
 
 
 
-test("Basic Interaction Test", async({page})=>{
+test("Single Checkbox Test", async({page})=>{
     await page.goto("https://www.qa-practice.com/elements/checkbox/single_checkbox");
 
     const singleCheckBox = page.locator("#id_checkbox_0");
@@ -58,5 +58,7 @@ test("Basic Interaction Test", async({page})=>{
     await singleCheckBox.check();
     
     expect(singleCheckBox).toBeChecked();
+
+    console.log('Single Checkbox Test is passed');
 
 })

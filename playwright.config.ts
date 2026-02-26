@@ -6,8 +6,8 @@ const defineConfig: PlaywrightTestConfig = {
 // to specify the test files to be executed
 //testMatch : ["tests/RecordTest.test.ts"],
 //testMatch : ["tests/login.test.ts"],
-testMatch : ["tests/BasicInteractionTest.test.ts"],
-
+//testMatch : ["tests/BasicInteractionTest.test.ts"],
+testMatch : ["tests/Alert.test.ts"],
 
 // to run all the test cases in the tests folder
 use : {
@@ -19,7 +19,7 @@ use : {
 retries : 0, // to retry the failed test cases times
 
 // to generate the report in html format
-//reporter : [["dot"], ["json",{OutputFile : "jsonReports/report.json"}],["html", {open : "always"}]]
+reporter : [["dot"], ["json",{OutputFile : "jsonReports/report.json"}],["html", {open : "always"}]]
 
 };
 
